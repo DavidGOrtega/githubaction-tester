@@ -39,4 +39,5 @@ jobs:
           #echo $CODEBLOCK > repot.md
           #cat report.md
           
-          #cml-send-comment report.md --commit-sha ${{ steps.chatops.outputs.SHA }}
+          echo "Im commenting at ${GITHUB_SHA}" > report.md
+          cml-send-comment report.md 
