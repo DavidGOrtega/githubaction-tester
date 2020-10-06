@@ -31,6 +31,7 @@ jobs:
         env:
           repo_token: ${{ secrets.CML_GITHUB_TOKEN }}
         run: |
-          python tester.py > report.md
+          printenv
+          #python tester.py > report.md
           
-          cml-send-comment report.md --commit-sha ${{ steps.chatops.outputs.SHA }}
+          #cml-send-comment report.md --commit-sha ${{ steps.chatops.outputs.SHA }}
